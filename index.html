@@ -1,0 +1,593 @@
+<!index.html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaren ❤️ Anıl</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Nunito',sans-serif;
+
+  background:
+  linear-gradient(135deg,#ffe0ec 0%,#ffd6f5 50%,#d6eaff 100%);
+
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+/* UÇUŞAN YAZILAR */
+
+.floating-text{
+  position:absolute;
+
+  color:white;
+
+  font-weight:900;
+
+  opacity:.18;
+
+  white-space:nowrap;
+
+  pointer-events:none;
+
+  text-shadow:0 0 10px rgba(255,255,255,.3);
+
+  animation:fly linear infinite;
+}
+
+@keyframes fly{
+
+  0%{
+    transform:
+    translateY(120vh)
+    translateX(0px)
+    rotate(0deg);
+
+    opacity:0;
+  }
+
+  10%{
+    opacity:.18;
+  }
+
+  100%{
+    transform:
+    translateY(-120vh)
+    translateX(120px)
+    rotate(12deg);
+
+    opacity:0;
+  }
+
+}
+
+/* HEARTS */
+
+.hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+
+.heart{
+  position:absolute;
+  font-size:1.5rem;
+  animation:floatUp linear infinite;
+  opacity:0;
+}
+
+@keyframes floatUp{
+
+  0%{
+    transform:translateY(110vh) rotate(0deg);
+    opacity:.7;
+  }
+
+  100%{
+    transform:translateY(-10vh) rotate(20deg);
+    opacity:0;
+  }
+
+}
+
+/* CARD */
+
+.card{
+
+  background:rgba(255,255,255,.75);
+
+  backdrop-filter:blur(16px);
+
+  border-radius:2.5rem;
+
+  padding:3rem 2.5rem;
+
+  max-width:460px;
+
+  width:90%;
+
+  text-align:center;
+
+  box-shadow:
+  0 8px 48px rgba(255,100,150,.15);
+
+  position:relative;
+
+  z-index:5;
+}
+
+/* EMOJI */
+
+.emoji{
+  font-size:5rem;
+
+  display:block;
+
+  margin-bottom:1rem;
+
+  animation:puppy 2s ease-in-out infinite;
+}
+
+@keyframes puppy{
+
+  0%,100%{
+    transform:rotate(-8deg) scale(1);
+  }
+
+  50%{
+    transform:rotate(8deg) scale(1.08);
+  }
+
+}
+
+/* TEXT */
+
+h1{
+
+  font-size:2rem;
+
+  font-weight:900;
+
+  color:#d63384;
+
+  margin-bottom:.8rem;
+}
+
+p{
+
+  font-size:1.05rem;
+
+  color:#777;
+
+  margin-bottom:2rem;
+
+  line-height:1.8;
+}
+
+/* BUTTONS */
+
+.buttons{
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  gap:1rem;
+
+  position:relative;
+
+  height:140px;
+}
+
+button{
+  border:none;
+  cursor:pointer;
+}
+
+/* YES BUTTON */
+
+#yesBtn{
+
+  background:
+  linear-gradient(135deg,#ff6eb4,#ff3e9d);
+
+  color:white;
+
+  border-radius:999px;
+
+  padding:1rem 2.8rem;
+
+  font-family:'Nunito',sans-serif;
+
+  font-size:1.15rem;
+
+  font-weight:900;
+
+  box-shadow:
+  0 4px 20px rgba(255,62,157,.35);
+
+  transition:
+  transform .15s,
+  box-shadow .15s;
+
+  transform-origin:center;
+}
+
+#yesBtn:hover{
+
+  box-shadow:
+  0 6px 28px rgba(255,62,157,.5);
+}
+
+/* NO BUTTON */
+
+#noBtn{
+
+  background:transparent;
+
+  color:#bbb;
+
+  border:2px solid #ddd;
+
+  border-radius:999px;
+
+  padding:.7rem 2rem;
+
+  font-family:'Nunito',sans-serif;
+
+  font-size:1rem;
+
+  font-weight:700;
+
+  position:relative;
+
+  transition:color .2s;
+}
+
+/* FINAL SCREEN */
+
+.big-emoji{
+
+  font-size:6rem;
+
+  animation:pop .5s cubic-bezier(.36,2,.6,1) forwards;
+}
+
+@keyframes pop{
+
+  0%{
+    transform:scale(0);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING TEXTS -->
+
+<div id="floatingContainer"></div>
+
+<!-- HEARTS -->
+
+<div class="hearts" id="heartsContainer"></div>
+
+<!-- CARD -->
+
+<div class="card" id="mainCard">
+
+  <span class="emoji">🥺</span>
+
+  <h1>Özür Dilerim...</h1>
+
+  <p>
+
+  Çok pişmanım...<br><br>
+
+  YAREN ❤️ ANIL<br>
+  04.03.2026 💕<br><br>
+
+  SENİ ÇOK SEVİYORUM ❤️<br>
+  Seni üzmeyeceğim...<br>
+  Üzersem Allah belamı versin.<br><br>
+
+  SENİN İÇİN KIRIKHANI YAKARIM 🔥
+
+  </p>
+
+  <div class="buttons">
+
+    <button id="yesBtn" onclick="accepted()">
+      Evet, affediyorum 💖
+    </button>
+
+    <button
+      id="noBtn"
+      onmouseover="runAway()"
+      ontouchstart="runAway()"
+    >
+      Hayır
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+
+/* FLOATING TEXTS */
+
+const floatingTexts = [
+
+'YAREN ❤️ ANIL',
+'04.03.2026',
+'SENİ ÇOK SEVİYORUM',
+'SENİN İÇİN KIRIKHANI YAKARIM',
+'AŞKIM ❤️',
+'YAREN ❤️',
+'ANIL ❤️',
+'BİR DAHA ÜZMEYECEĞİM'
+
+];
+
+const floatingContainer =
+document.getElementById('floatingContainer');
+
+for(let i=0;i<40;i++){
+
+  const t =
+  document.createElement('div');
+
+  t.className = 'floating-text';
+
+  t.innerText =
+  floatingTexts[
+    Math.floor(Math.random()*floatingTexts.length)
+  ];
+
+  t.style.left =
+  Math.random()*100 + 'vw';
+
+  t.style.fontSize =
+  (14 + Math.random()*20) + 'px';
+
+  t.style.animationDuration =
+  (8 + Math.random()*10) + 's';
+
+  t.style.animationDelay =
+  (Math.random()*6) + 's';
+
+  floatingContainer.appendChild(t);
+
+}
+
+/* FLOATING HEARTS */
+
+const container =
+document.getElementById('heartsContainer');
+
+const emojis =
+['💕','💗','💓','🌸','✨','💞','💝'];
+
+for(let i=0;i<22;i++){
+
+  const h =
+  document.createElement('div');
+
+  h.className = 'heart';
+
+  h.textContent =
+  emojis[
+    Math.floor(Math.random()*emojis.length)
+  ];
+
+  h.style.left =
+  Math.random()*100 + 'vw';
+
+  h.style.fontSize =
+  (1 + Math.random()*1.5) + 'rem';
+
+  h.style.animationDuration =
+  (6 + Math.random()*8) + 's';
+
+  h.style.animationDelay =
+  (Math.random()*8) + 's';
+
+  container.appendChild(h);
+
+}
+
+/* BUTTONS */
+
+let yesScale = 1;
+
+const yesBtn =
+document.getElementById('yesBtn');
+
+const noBtn =
+document.getElementById('noBtn');
+
+let noCount = 0;
+
+const noCaptions = [
+
+'Hayır',
+'Emin misin?',
+'Gerçekten mi?',
+'Dur bir düşün...',
+'Lütfen 🥺',
+'Olmaz öyle!',
+'Hayırrr 😭',
+'Son kez düşün!'
+
+];
+
+function runAway(){
+
+  noCount++;
+
+  yesScale =
+  Math.min(yesScale + 0.22,3.2);
+
+  yesBtn.style.transform =
+  `scale(${yesScale})`;
+
+  noBtn.textContent =
+  noCaptions[
+    Math.min(
+      noCount,
+      noCaptions.length - 1
+    )
+  ];
+
+  const card =
+  document.querySelector('.card');
+
+  const cw =
+  card.offsetWidth -
+  noBtn.offsetWidth - 60;
+
+  const ch =
+  card.offsetHeight -
+  noBtn.offsetHeight - 60;
+
+  const rx =
+  (Math.random()*cw - cw/2);
+
+  const ry =
+  (Math.random()*ch - ch/2);
+
+  noBtn.style.position =
+  'absolute';
+
+  noBtn.style.left =
+  (card.offsetWidth/2 + rx) + 'px';
+
+  noBtn.style.top =
+  (card.offsetHeight/2 + ry) + 'px';
+
+  noBtn.style.transform =
+  'translate(-50%, -50%)';
+
+}
+
+/* ACCEPTED */
+
+function accepted(){
+
+  const card =
+  document.getElementById('mainCard');
+
+  card.innerHTML = `
+
+  <div
+    style="
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    "
+  >
+
+    <div class="big-emoji">
+      🥰
+    </div>
+
+    <h2
+      style="
+      font-size:2rem;
+      font-weight:900;
+      color:#d63384;
+      margin-top:1rem;
+      "
+    >
+      Teşekkür ederim aşkım ❤️
+    </h2>
+
+    <p
+      style="
+      margin-top:1rem;
+      font-size:1.1rem;
+      color:#888;
+      line-height:1.8;
+      "
+    >
+
+    Seni bir daha üzmeyeceğim...<br><br>
+
+    Seni çok seviyorum aşkım ❤️
+
+    </p>
+
+  </div>
+
+  `;
+
+  for(let i=0;i<40;i++){
+
+    setTimeout(()=>{
+
+      const b =
+      document.createElement('div');
+
+      b.className = 'heart';
+
+      b.textContent =
+      ['💖','💗','✨','🌸','💞'][
+        Math.floor(Math.random()*5)
+      ];
+
+      b.style.left =
+      Math.random()*100 + 'vw';
+
+      b.style.fontSize =
+      (1.5 + Math.random()*2) + 'rem';
+
+      b.style.animationDuration =
+      (3 + Math.random()*3) + 's';
+
+      b.style.animationDelay = '0s';
+
+      b.style.opacity = 1;
+
+      container.appendChild(b);
+
+      setTimeout(()=>{
+        b.remove();
+      },6000);
+
+    },i*80);
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
