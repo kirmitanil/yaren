@@ -1,8 +1,9 @@
-<!index.html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Yaren ❤️ Anıl</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
@@ -16,6 +17,7 @@
 }
 
 body{
+
   font-family:'Nunito',sans-serif;
 
   background:
@@ -32,9 +34,10 @@ body{
   position:relative;
 }
 
-/* UÇUŞAN YAZILAR */
+/* FLOATING TEXTS */
 
 .floating-text{
+
   position:absolute;
 
   color:white;
@@ -47,20 +50,24 @@ body{
 
   pointer-events:none;
 
-  text-shadow:0 0 10px rgba(255,255,255,.3);
+  text-shadow:
+  0 0 10px rgba(255,255,255,.3);
 
   animation:fly linear infinite;
+
 }
 
 @keyframes fly{
 
   0%{
+
     transform:
     translateY(120vh)
     translateX(0px)
     rotate(0deg);
 
     opacity:0;
+
   }
 
   10%{
@@ -68,12 +75,14 @@ body{
   }
 
   100%{
+
     transform:
     translateY(-120vh)
     translateX(120px)
     rotate(12deg);
 
     opacity:0;
+
   }
 
 }
@@ -81,29 +90,49 @@ body{
 /* HEARTS */
 
 .hearts{
+
   position:fixed;
+
   inset:0;
+
   pointer-events:none;
+
   z-index:0;
+
 }
 
 .heart{
+
   position:absolute;
+
   font-size:1.5rem;
+
   animation:floatUp linear infinite;
+
   opacity:0;
+
 }
 
 @keyframes floatUp{
 
   0%{
-    transform:translateY(110vh) rotate(0deg);
+
+    transform:
+    translateY(110vh)
+    rotate(0deg);
+
     opacity:.7;
+
   }
 
   100%{
-    transform:translateY(-10vh) rotate(20deg);
+
+    transform:
+    translateY(-10vh)
+    rotate(20deg);
+
     opacity:0;
+
   }
 
 }
@@ -112,9 +141,11 @@ body{
 
 .card{
 
-  background:rgba(255,255,255,.75);
+  background:
+  rgba(255,255,255,.75);
 
-  backdrop-filter:blur(16px);
+  backdrop-filter:
+  blur(16px);
 
   border-radius:2.5rem;
 
@@ -132,11 +163,13 @@ body{
   position:relative;
 
   z-index:5;
+
 }
 
 /* EMOJI */
 
 .emoji{
+
   font-size:5rem;
 
   display:block;
@@ -144,16 +177,25 @@ body{
   margin-bottom:1rem;
 
   animation:puppy 2s ease-in-out infinite;
+
 }
 
 @keyframes puppy{
 
   0%,100%{
-    transform:rotate(-8deg) scale(1);
+
+    transform:
+    rotate(-8deg)
+    scale(1);
+
   }
 
   50%{
-    transform:rotate(8deg) scale(1.08);
+
+    transform:
+    rotate(8deg)
+    scale(1.08);
+
   }
 
 }
@@ -169,6 +211,7 @@ h1{
   color:#d63384;
 
   margin-bottom:.8rem;
+
 }
 
 p{
@@ -180,6 +223,7 @@ p{
   margin-bottom:2rem;
 
   line-height:1.8;
+
 }
 
 /* BUTTONS */
@@ -196,12 +240,8 @@ p{
 
   position:relative;
 
-  height:140px;
-}
+  height:160px;
 
-button{
-  border:none;
-  cursor:pointer;
 }
 
 /* YES BUTTON */
@@ -209,9 +249,15 @@ button{
 #yesBtn{
 
   background:
-  linear-gradient(135deg,#ff6eb4,#ff3e9d);
+  linear-gradient(
+  135deg,
+  #ff6eb4,
+  #ff3e9d
+  );
 
   color:white;
+
+  border:none;
 
   border-radius:999px;
 
@@ -223,6 +269,8 @@ button{
 
   font-weight:900;
 
+  cursor:pointer;
+
   box-shadow:
   0 4px 20px rgba(255,62,157,.35);
 
@@ -231,12 +279,14 @@ button{
   box-shadow .15s;
 
   transform-origin:center;
+
 }
 
 #yesBtn:hover{
 
   box-shadow:
   0 6px 28px rgba(255,62,157,.5);
+
 }
 
 /* NO BUTTON */
@@ -259,9 +309,20 @@ button{
 
   font-weight:700;
 
-  position:relative;
+  cursor:pointer;
 
-  transition:color .2s;
+  position:absolute;
+
+  left:50%;
+  top:90px;
+
+  transform:
+  translate(-50%,-50%);
+
+  transition:
+  color .2s,
+  transform .15s;
+
 }
 
 /* FINAL SCREEN */
@@ -270,7 +331,9 @@ button{
 
   font-size:6rem;
 
-  animation:pop .5s cubic-bezier(.36,2,.6,1) forwards;
+  animation:
+  pop .5s cubic-bezier(.36,2,.6,1) forwards;
+
 }
 
 @keyframes pop{
@@ -302,40 +365,43 @@ button{
 
 <div class="card" id="mainCard">
 
-  <span class="emoji">🥺</span>
+<span class="emoji">🥺</span>
 
-  <h1>Özür Dilerim...</h1>
+<h1>Özür Dilerim...</h1>
 
-  <p>
+<p>
 
-  Çok pişmanım...<br><br>
+Çok pişmanım...<br><br>
 
-  YAREN ❤️ ANIL<br>
-  04.03.2026 💕<br><br>
+YAREN ❤️ ANIL<br>
+04.03.2026 💕<br><br>
 
-  SENİ ÇOK SEVİYORUM ❤️<br>
-  Seni üzmeyeceğim...<br>
-  Üzersem Allah belamı versin.<br><br>
+SENİ ÇOK SEVİYORUM ❤️<br>
+Seni üzmeyeceğim...<br>
+Üzersem Allah belamı versin.
 
-  SENİN İÇİN KIRIKHANI YAKARIM 🔥
+</p>
 
-  </p>
+<div class="buttons">
 
-  <div class="buttons">
+<button
+id="yesBtn"
+onclick="accepted()"
+>
 
-    <button id="yesBtn" onclick="accepted()">
-      Evet, affediyorum 💖
-    </button>
+Evet, affediyorum 💖
 
-    <button
-      id="noBtn"
-      onmouseover="runAway()"
-      ontouchstart="runAway()"
-    >
-      Hayır
-    </button>
+</button>
 
-  </div>
+<button
+id="noBtn"
+>
+
+Hayır
+
+</button>
+
+</div>
 
 </div>
 
@@ -347,28 +413,34 @@ const floatingTexts = [
 
 'YAREN ❤️ ANIL',
 '04.03.2026',
-'SENİ ÇOK SEVİYORUM',
-'SENİN İÇİN KIRIKHANI YAKARIM',
+'SENİ ÇOK SEVİYORUM ❤️',
 'AŞKIM ❤️',
 'YAREN ❤️',
 'ANIL ❤️',
-'BİR DAHA ÜZMEYECEĞİM'
+'BİR DAHA ÜZMEYECEĞİM',
+'SENİ ÇOK SEVİYORUM'
 
 ];
 
 const floatingContainer =
-document.getElementById('floatingContainer');
+document.getElementById(
+'floatingContainer'
+);
 
 for(let i=0;i<40;i++){
 
   const t =
   document.createElement('div');
 
-  t.className = 'floating-text';
+  t.className =
+  'floating-text';
 
   t.innerText =
   floatingTexts[
-    Math.floor(Math.random()*floatingTexts.length)
+  Math.floor(
+  Math.random()*
+  floatingTexts.length
+  )
   ];
 
   t.style.left =
@@ -383,17 +455,29 @@ for(let i=0;i<40;i++){
   t.style.animationDelay =
   (Math.random()*6) + 's';
 
-  floatingContainer.appendChild(t);
+  floatingContainer
+  .appendChild(t);
 
 }
 
 /* FLOATING HEARTS */
 
 const container =
-document.getElementById('heartsContainer');
+document.getElementById(
+'heartsContainer'
+);
 
-const emojis =
-['💕','💗','💓','🌸','✨','💞','💝'];
+const emojis = [
+
+'💕',
+'💗',
+'💓',
+'🌸',
+'✨',
+'💞',
+'💝'
+
+];
 
 for(let i=0;i<22;i++){
 
@@ -404,20 +488,26 @@ for(let i=0;i<22;i++){
 
   h.textContent =
   emojis[
-    Math.floor(Math.random()*emojis.length)
+  Math.floor(
+  Math.random()*
+  emojis.length
+  )
   ];
 
   h.style.left =
   Math.random()*100 + 'vw';
 
   h.style.fontSize =
-  (1 + Math.random()*1.5) + 'rem';
+  (1 + Math.random()*1.5)
+  + 'rem';
 
   h.style.animationDuration =
-  (6 + Math.random()*8) + 's';
+  (6 + Math.random()*8)
+  + 's';
 
   h.style.animationDelay =
-  (Math.random()*8) + 's';
+  (Math.random()*8)
+  + 's';
 
   container.appendChild(h);
 
@@ -428,10 +518,14 @@ for(let i=0;i<22;i++){
 let yesScale = 1;
 
 const yesBtn =
-document.getElementById('yesBtn');
+document.getElementById(
+'yesBtn'
+);
 
 const noBtn =
-document.getElementById('noBtn');
+document.getElementById(
+'noBtn'
+);
 
 let noCount = 0;
 
@@ -448,105 +542,141 @@ const noCaptions = [
 
 ];
 
-function runAway(){
+/* NO BUTTON RUNS AWAY */
+
+function runAway(e){
+
+  e.preventDefault();
 
   noCount++;
 
+  /* YES BUTTON GROWS */
+
   yesScale =
-  Math.min(yesScale + 0.22,3.2);
+  Math.min(
+  yesScale + 0.28,
+  5
+  );
 
   yesBtn.style.transform =
   `scale(${yesScale})`;
 
+  /* CHANGE TEXT */
+
   noBtn.textContent =
   noCaptions[
-    Math.min(
-      noCount,
-      noCaptions.length - 1
-    )
+  Math.min(
+  noCount,
+  noCaptions.length - 1
+  )
   ];
+
+  /* RANDOM POSITION */
 
   const card =
   document.querySelector('.card');
 
-  const cw =
+  const maxX =
   card.offsetWidth -
-  noBtn.offsetWidth - 60;
+  noBtn.offsetWidth - 20;
 
-  const ch =
+  const maxY =
   card.offsetHeight -
-  noBtn.offsetHeight - 60;
+  noBtn.offsetHeight - 20;
 
-  const rx =
-  (Math.random()*cw - cw/2);
+  const randomX =
+  Math.random() * maxX;
 
-  const ry =
-  (Math.random()*ch - ch/2);
-
-  noBtn.style.position =
-  'absolute';
+  const randomY =
+  Math.random() * maxY;
 
   noBtn.style.left =
-  (card.offsetWidth/2 + rx) + 'px';
+  randomX + 'px';
 
   noBtn.style.top =
-  (card.offsetHeight/2 + ry) + 'px';
-
-  noBtn.style.transform =
-  'translate(-50%, -50%)';
+  randomY + 'px';
 
 }
+
+/* EVENTS */
+
+noBtn.addEventListener(
+'mouseenter',
+runAway
+);
+
+noBtn.addEventListener(
+'touchstart',
+runAway
+);
+
+noBtn.addEventListener(
+'click',
+(e)=>{
+
+  e.preventDefault();
+
+  runAway(e);
+
+}
+);
 
 /* ACCEPTED */
 
 function accepted(){
 
   const card =
-  document.getElementById('mainCard');
+  document.getElementById(
+  'mainCard'
+  );
 
   card.innerHTML = `
 
   <div
-    style="
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    "
+  style="
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  "
   >
 
-    <div class="big-emoji">
-      🥰
-    </div>
+  <div class="big-emoji">
+  🥰
+  </div>
 
-    <h2
-      style="
-      font-size:2rem;
-      font-weight:900;
-      color:#d63384;
-      margin-top:1rem;
-      "
-    >
-      Teşekkür ederim aşkım ❤️
-    </h2>
+  <h2
+  style="
+  font-size:2rem;
+  font-weight:900;
+  color:#d63384;
+  margin-top:1rem;
+  "
+  >
 
-    <p
-      style="
-      margin-top:1rem;
-      font-size:1.1rem;
-      color:#888;
-      line-height:1.8;
-      "
-    >
+  Teşekkür ederim aşkım ❤️
 
-    Seni bir daha üzmeyeceğim...<br><br>
+  </h2>
 
-    Seni çok seviyorum aşkım ❤️
+  <p
+  style="
+  margin-top:1rem;
+  font-size:1.1rem;
+  color:#888;
+  line-height:1.8;
+  "
+  >
 
-    </p>
+  Seni bir daha üzmeyeceğim...<br><br>
+
+  Seni çok seviyorum aşkım ❤️
+
+  </p>
 
   </div>
 
   `;
+
+  /* HEART BURST */
 
   for(let i=0;i<40;i++){
 
@@ -555,30 +685,38 @@ function accepted(){
       const b =
       document.createElement('div');
 
-      b.className = 'heart';
+      b.className =
+      'heart';
 
       b.textContent =
       ['💖','💗','✨','🌸','💞'][
-        Math.floor(Math.random()*5)
+      Math.floor(
+      Math.random()*5
+      )
       ];
 
       b.style.left =
       Math.random()*100 + 'vw';
 
       b.style.fontSize =
-      (1.5 + Math.random()*2) + 'rem';
+      (1.5 + Math.random()*2)
+      + 'rem';
 
       b.style.animationDuration =
-      (3 + Math.random()*3) + 's';
+      (3 + Math.random()*3)
+      + 's';
 
-      b.style.animationDelay = '0s';
+      b.style.animationDelay =
+      '0s';
 
       b.style.opacity = 1;
 
       container.appendChild(b);
 
       setTimeout(()=>{
+
         b.remove();
+
       },6000);
 
     },i*80);
